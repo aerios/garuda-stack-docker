@@ -1,4 +1,4 @@
 #! /bin/bash
 
 hdfs namenode -format
-start-dfs.sh
+$HADOOP_HOME/sbin/start-dfs.sh
