@@ -8,7 +8,7 @@ RUN ["/bin/bash", "install-java.sh"]
 
 COPY scripts/install-hadoop.sh install-hadoop.sh
 RUN ["/bin/bash","install-hadoop.sh"]
-ENV HADOOP_HOME=/usr/loca/hadoop
+ENV HADOOP_HOME=/usr/local/hadoop
 ENV PATH=$PATH:$HADOOP_HOME/bin
 
 RUN ["echo",$HADOOP_HOME]
