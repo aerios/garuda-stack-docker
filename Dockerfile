@@ -8,7 +8,7 @@ RUN ["/bin/bash", "install-java.sh"]
 
 COPY scripts/install-hadoop.sh install-hadoop.sh
 RUN ["/bin/bash","install-hadoop.sh"]
-RUN ["/bin/bash","-c ~/.bashrc"]
+RUN ["/bin/bash","-c source ~/.bashrc"]
 
 COPY config/core-site.xml /usr/local/hadoop/etc/core-site.xml
 COPY config/hdfs-site.xml /usr/local/hadoop/etc/hdfs-site.xml
