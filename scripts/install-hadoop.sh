@@ -12,7 +12,7 @@ tar -xvzf hadoop-2.7.2.tar.gz -C .
 mv  hadoop-2.7.2 hadoop
 
 echo "export HADOOP_HOME=/usr/local/hadoop" >> ~/.bashrc
-echo "export PATH=$PATH:$HADOOP_HOME/bin/" >> ~/.bashrc
+echo "export PATH=$PATH:/usr/local/hadoop/bin/" >> ~/.bashrc
 source ~/.bashrc
 
 echo "Verifying hadoop installation"
