@@ -13,12 +13,5 @@ mv  hadoop-2.7.2 hadoop
 
 echo "export HADOOP_HOME=/usr/local/hadoop" >> ~/.bashrc
 echo "export PATH=$PATH:/usr/local/hadoop/bin/" >> ~/.bashrc
-source ~/.bashrc
-
-echo "Verifying hadoop installation"
-cat ~/.bashrc
-echo "PATH=$PATH"
-echo "HADOOP_HOME=$HADOOP_HOME"
-
 
 
