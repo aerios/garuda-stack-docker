@@ -1,15 +1,17 @@
 FROM ubuntu:14.04
 
-#=======================
-# Install utils
-#=======================
 COPY scripts/install-defaults.sh install-defaults.sh 
 RUN ["/bin/bash", "install-defaults.sh"]
 
-
-#=======================
-# Install JDK7 
-#=======================
 COPY  scripts/install-java.sh install-java.sh
 RUN ["/bin/bash", "install-java.sh"]
+
+COPY scripts/install-hadoop.sh install-hadoop.sh
+RUN ["/bin/bash","install-hadoop.sh"]
+
+COPY config/core-site.xml /usr/local/hadoop/etc/core-site.xml
+COPY config/hdfs-site.xml /usr/local/hadoop/etc/hdfs-site.xml
+COPY scripts/setup-hdfs.sh setup-hdfs.sh
+RUN ["/bin/bash","setup-hdfs.sh"]
+
 CMD ["echo","DONE"]
