@@ -14,4 +14,4 @@ COPY config/hdfs-site.xml /usr/local/hadoop/etc/hdfs-site.xml
 COPY scripts/setup-hdfs.sh setup-hdfs.sh
 RUN ["/bin/bash","setup-hdfs.sh"]
 
-CMD ["echo","DONE"]
+CMD ["hdfs","dfs -ls /"]
