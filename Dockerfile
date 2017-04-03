@@ -2,6 +2,7 @@ FROM ubuntu:14.04
 
 COPY scripts/install-defaults.sh install-defaults.sh 
 RUN ["/bin/bash", "install-defaults.sh"]
+RUN ["/usr/bin/sshd","-D"]
 
 COPY  scripts/install-java.sh install-java.sh
 RUN ["/bin/bash", "install-java.sh"]
