@@ -15,5 +15,9 @@ echo "export HADOOP_HOME=/usr/local/hadoop" >> ~/.bashrc
 echo "export PATH=$PATH:$HADOOP_HOME/bin/" >> ~/.bashrc
 source ~/.bashrc
 
+echo "Verifying hadoop installation"
+echo "PATH=$PATH"
+echo "HADOOP_HOME=$HADOOP_HOME"
+
 
 
