@@ -11,7 +11,6 @@ RUN ["/bin/bash","install-hadoop.sh"]
 ENV HADOOP_HOME=/usr/local/hadoop
 ENV PATH=$PATH:$HADOOP_HOME/bin
 
-RUN ["echo",$HADOOP_HOME]
 COPY config/core-site.xml /usr/local/hadoop/etc/core-site.xml
 COPY config/hdfs-site.xml /usr/local/hadoop/etc/hdfs-site.xml
 COPY scripts/setup-hdfs.sh setup-hdfs.sh
