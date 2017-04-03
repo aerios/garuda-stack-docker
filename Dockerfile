@@ -8,7 +8,8 @@ RUN ["/bin/bash", "install-java.sh"]
 
 COPY scripts/install-hadoop.sh install-hadoop.sh
 RUN ["/bin/bash","install-hadoop.sh"]
-RUN ["/bin/bash","source ~/.bashrc"]
+ENV HADOOP_HOME=/usr/loca/hadoop
+ENV PATH=$PATH:$HADOOP_HOME/bin
 
 COPY config/core-site.xml /usr/local/hadoop/etc/core-site.xml
 COPY config/hdfs-site.xml /usr/local/hadoop/etc/hdfs-site.xml
